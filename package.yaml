@@ -35,6 +35,7 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - aoc2021
+    - time
 
 tests:
   aoc2021-test:
