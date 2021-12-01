@@ -3,12 +3,15 @@ module Day1
       ,day1b
     ) where
 
+countTrue :: [Bool] -> Int
+countTrue = length . filter (==True)
+
 day1 :: String -> Int
-day1 input =  length $ filter (==True) $ zipWith (<) series (tail series)
+day1 input =  countTrue $ zipWith (<) series (tail series)
   where series = parseInput input
 
 day1b :: String -> Int
-day1b input =length $ filter (==True) $ zipWith (<) series (tail series) 
+day1b input =countTrue $ zipWith (<) series (tail series) 
  where series = zipWith3 (\a b c -> a+b+c) parsed (tail parsed) (drop 2 parsed)
        parsed = parseInput input
 

@@ -27,8 +27,6 @@ library
   exposed-modules:
       Day1
       Lib
-  other-modules:
-      Paths_aoc2021
   hs-source-dirs:
       src
   build-depends:
@@ -37,8 +35,6 @@ library
 
 executable aoc2021-exe
   main-is: Main.hs
-  other-modules:
-      Paths_aoc2021
   hs-source-dirs:
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N

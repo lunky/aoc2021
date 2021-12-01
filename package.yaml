@@ -24,10 +24,16 @@ dependencies:
 
 library:
   source-dirs: src
+  when:
+    - condition: false
+      other-modules: Paths_aoc2021
 
 executables:
   aoc2021-exe:
     main:                Main.hs
+    when:
+    - condition: false
+      other-modules: Paths_aoc2021
     source-dirs:         app
     ghc-options:
     - -threaded
@@ -36,6 +42,7 @@ executables:
     dependencies:
     - aoc2021
     - time
+
 
 tests:
   aoc2021-test:
