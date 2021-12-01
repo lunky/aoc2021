@@ -26,6 +26,7 @@ source-repository head
 library
   exposed-modules:
       Day1
+      Day2
       Lib
   hs-source-dirs:
       src
@@ -49,6 +50,7 @@ test-suite aoc2021-test
   main-is: Spec.hs
   other-modules:
       Day1Spec
+      Day2Spec
       LibSpec
       Paths_aoc2021
   hs-source-dirs:

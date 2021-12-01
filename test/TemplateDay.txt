@@ -1,0 +1,17 @@
+module Day%%DAY_NUMBER%%Spec where
+
+import Day%%DAY_NUMBER%%
+import Test.Hspec
+
+spec :: Spec
+spec = do
+  describe "Day%%DAY_NUMBER%%" $ do
+    xit "should do sample 1" $ do
+      let input=""
+      let expected=0
+      day%%DAY_NUMBER%% input `shouldBe` expected
+  describe "Day%%DAY_NUMBER%%b" $ do
+    xit "should do sample 1" $ do
+      let input=""
+      let expected=0
+      day%%DAY_NUMBER%%b input `shouldBe` expected

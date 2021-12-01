@@ -2,6 +2,7 @@
 module Main where
 
 import Day1
+import Day2
 import Data.Time
 
 timeStamp :: IO a -> IO ()
@@ -24,3 +25,9 @@ runDays = do
     putStrLn ("day1: " ++ answer)
     let answer = show $ day1b contents
     putStrLn ("day1b: " ++ answer)
+
+    contents <- readFile "data/day2.txt"
+    let answer = show $ day2 contents
+    putStrLn ("day2: " ++ answer)
+    let answer = show $ day2b contents
+    putStrLn ("day2b: " ++ answer)
