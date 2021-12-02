@@ -31,8 +31,3 @@ parseInput input = map ((\[a,b]->(a,read b)).words)$ lines input
 
 _input = "forward 5\ndown 5\nforward 8\nup 3\ndown 8\nforward 2"
 
-{--
-parseInput' :: String -> [[Int]]
-parseInput' input = map (map read.words) $ lines input
-_input = "1 2 3 4\n5 6 7 8\n9 10 11 12\n13 14 15 16"
---}
