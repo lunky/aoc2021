@@ -7,7 +7,7 @@ module Day3
 import Data.List (group, transpose, sort)
     
 day3 :: String -> Int 
-day3 input = (bintodec $ gamma input) * (bintodec $ epsilon input)
+day3 input = bintodec (gamma input) * bintodec (epsilon input)
 
 gamma :: String -> Int
 gamma input = read $ map (head.longest.group.sort) $ transpose $ parseInput input
@@ -26,18 +26,18 @@ shortest xs = snd $ minimum $ map (\x -> (length x, x)) xs
 
 
 day3b :: String -> Int
-day3b input = (bintodec $ read $ o2rating 0 (parseInput input)) *
-              (bintodec $ read $ co2rating 0 (parseInput input))
+day3b input = bintodec (read $ o2rating 0 (parseInput input)) *
+              bintodec (read $ co2rating 0 (parseInput input))
 
 o2rating :: Int -> [String] -> String
 o2rating _ [x] = x
 o2rating offset xs = o2rating (offset+1) $ filter (\x -> x !! offset == most) xs
-  where most = mostCommon $ (transpose xs) !! offset
+  where most = mostCommon $ transpose xs !! offset
 
 co2rating :: Int -> [String] -> String
 co2rating _ [x] = x
 co2rating offset xs = co2rating (offset+1) $ filter (\x -> x !! offset == most) xs
-  where most = leastCommon $ (transpose xs) !! offset
+  where most = leastCommon $ transpose xs !! offset
 
 
 {--
@@ -52,4 +52,4 @@ parseInput = lines
 
 bintodec :: Integral i => i -> i
 bintodec 0 = 0
-bintodec i = 2 * bintodec (div i 10) + (mod i 10)
+bintodec i = 2 * bintodec (div i 10) + mod i 10
