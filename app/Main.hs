@@ -4,6 +4,9 @@ module Main where
 import Day1
 import Day2
 import Day3
+import Day4
+import Day5
+import Day6
 import Data.Time
 
 timeStamp :: IO a -> IO ()
@@ -38,3 +41,21 @@ runDays = do
     putStrLn ("day3: " ++ answer)
     let answer = show $ day3b contents
     putStrLn ("day3b: " ++ answer)
+
+    contents <- readFile "data/day4.txt"
+    let answer = show $ day4 contents
+    putStrLn ("day4: " ++ answer)
+    let answer = show $ day4b contents
+    putStrLn ("day4b: " ++ answer)
+
+    contents <- readFile "data/day5.txt"
+    let answer = show $ day5 contents
+    putStrLn ("day5: " ++ answer)
+    let answer = show $ day5b contents
+    putStrLn ("day5b: " ++ answer)
+
+    contents <- readFile "data/day6.txt"
+    let answer = show $ day6 contents
+    putStrLn ("day6: " ++ answer)
+    let answer = show $ day6b 256 contents
+    putStrLn ("day6b: " ++ answer)

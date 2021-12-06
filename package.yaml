@@ -27,6 +27,9 @@ library:
   when:
     - condition: false
       other-modules: Paths_aoc2021
+  dependencies:
+    - containers
+    - split 
 
 executables:
   aoc2021-exe:
