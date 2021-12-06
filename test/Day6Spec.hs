@@ -5,7 +5,7 @@ import Test.Hspec
 
 spec :: Spec
 spec = do
-  describe "Day6" $ do
+  describe "Day6" $ 
     it "should do sample 1" $ do
       let input = "3,4,3,1,2"
       let expected=5934
