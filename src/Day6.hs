@@ -4,8 +4,7 @@ module Day6
    ,day6b
     )
     where
-import Data.List
-import Data.List.Split
+import Data.List.Split (splitOn)
     
 day6 :: String -> Int 
 day6 input = length $ 
@@ -20,9 +19,6 @@ day6b days input = sum $ head $ drop days
                    $ iterate (\(x:xs) -> replace 6 (xs!!6 + x) xs ++ [x]) 
                    $ foldr (\y acc-> replace y (acc!!y +1) acc) emptyBuckets
                    $ parseInput input
-
-bucket :: [Int] -> [Int]
-bucket = foldr (\y acc -> replace y (acc!!y + 1) acc) emptyBuckets
 
 parseInput :: String -> [Int]
 parseInput = map read . splitOn ","
