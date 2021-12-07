@@ -32,6 +32,8 @@ library
       Day4
       Day5
       Day6
+      Day7
+      Day8
   hs-source-dirs:
       src
   build-depends:
@@ -62,6 +64,8 @@ test-suite aoc2021-test
       Day4Spec
       Day5Spec
       Day6Spec
+      Day7Spec
+      Day8Spec
       Paths_aoc2021
   hs-source-dirs:
       test
