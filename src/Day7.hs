@@ -16,14 +16,14 @@ day7 input = sum $ map (\y -> abs$(y-med)) unsorted
 day7b :: String -> Int
 day7b input = minimum $ day7b' input
 
--- slow as hell, maybe precalculate distances?
 day7b' input =  possible
   where unsorted = parseInput input
         (lower,upper)= (\y->(minimum y, maximum y)) unsorted
         possible=map (\start-> sum $ map (\y-> cost $ abs(y-start)) unsorted) [lower..upper]
 
 cost :: Int -> Int
-cost x = sum [1..x]
+--cost x = sum [1..x]
+cost n = n * (n + 1) `div` 2
 
 _input = "16,1,2,0,4,2,7,1,2,14"
 
@@ -37,3 +37,6 @@ median input
 
 parseInput :: String ->[Int]
 parseInput = map read . splitOn "," 
+
+--
+
