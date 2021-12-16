@@ -9,6 +9,9 @@ import Day5
 import Day6
 import Day7
 import Day8
+import Day9
+import Day10
+import Day11
 import Data.Time
 
 timeStamp :: IO a -> IO ()
@@ -73,3 +76,21 @@ runDays = do
     putStrLn ("day8: " ++ answer)
     let answer = show $ day8b contents
     putStrLn ("day8b: " ++ answer)
+
+    contents <- readFile "data/day9.txt"
+    let answer = show $ day9 contents
+    putStrLn ("day9: " ++ answer)
+    let answer = show $ day9b contents
+    putStrLn ("day9b: " ++ answer)
+
+    contents <- readFile "data/day10.txt"
+    let answer = show $ day10 contents
+    putStrLn ("day10: " ++ answer)
+    let answer = show $ day10b contents
+    putStrLn ("day10b: " ++ answer)
+
+    contents <- readFile "data/day11.txt"
+    let answer = show $ day11 contents
+    putStrLn ("day11: " ++ answer)
+    let answer = show $ day11b contents
+    putStrLn ("day11b: " ++ answer)

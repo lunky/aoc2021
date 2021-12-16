@@ -27,6 +27,9 @@ library
   exposed-modules:
       AocLib
       Day1
+      Day10
+      Day11
+      Day12
       Day2
       Day3
       Day4
@@ -34,6 +37,7 @@ library
       Day6
       Day7
       Day8
+      Day9
   hs-source-dirs:
       src
   build-depends:
@@ -58,6 +62,9 @@ test-suite aoc2021-test
   main-is: Spec.hs
   other-modules:
       AocLibSpec
+      Day10Spec
+      Day11Spec
+      Day12Spec
       Day1Spec
       Day2Spec
       Day3Spec
@@ -66,6 +73,7 @@ test-suite aoc2021-test
       Day6Spec
       Day7Spec
       Day8Spec
+      Day9Spec
       Paths_aoc2021
   hs-source-dirs:
       test
