@@ -4,27 +4,28 @@ module Main where
 import Day1
 import Day2
 import Day3
-import Day4
-import Day5
-import Day6
-import Day7
+-- import Day4
+-- import Day5
+-- import Day6
+-- import Day7
 import Day8
 import Day9
 import Day10
 import Day11
+import Day13
 import Data.Time
 
 timeStamp :: IO a -> IO ()
-timeStamp f = do 
-    c <- getCurrentTime                  --  2009-04-21 14:25:29.5585588 UTC 
+timeStamp f = do
+    c <- getCurrentTime                  --  2009-04-21 14:25:29.5585588 UTC
     print c
     f
-    c <- getCurrentTime                  --  2009-04-21 14:25:29.5585588 UTC 
+    c <- getCurrentTime                  --  2009-04-21 14:25:29.5585588 UTC
     print c
 
 
 main :: IO ()
-main = 
+main =
     timeStamp runDays
 
 runDays :: IO ()
@@ -94,3 +95,11 @@ runDays = do
     putStrLn ("day11: " ++ answer)
     let answer = show $ day11b contents
     putStrLn ("day11b: " ++ answer)
+
+    contents <- readFile "data/day13.txt"
+    let answer = show $ day13 contents
+    putStrLn ("day13: " ++ answer)
+    -- let answer = show $ day13b contents
+    -- putStrLn ("day13b: " ++ answer)
+    day13b contents
+    -- putStrLn ("day13b: " ++ answer)

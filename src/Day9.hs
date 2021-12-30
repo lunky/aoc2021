@@ -11,7 +11,7 @@ import qualified Data.Map as Map
 import Data.Set (Set)
 import qualified Data.Set as Set
 import Data.Char (digitToInt)
-import Data.List (sortOn)
+import Data.List (sortOn,foldl')
 import Data.Ord
     
 type Point = (Int,Int)
@@ -57,7 +57,7 @@ getAdjacent (x,y) grid = mapMaybe (`mapLookup` grid) [ (x,y+1), (x-1,y), (x+1,y)
 
 getBasin :: HeightMap -> Point -> Set Point
 getBasin grid = getBasin' Set.empty
-    where getBasin' seen point = foldl haveSeen (Set.insert point seen) (getAdjacent point grid)
+    where getBasin' seen point = foldl' haveSeen (Set.insert point seen) (getAdjacent point grid)
           haveSeen seen (point,height) = 
                 if Set.member point seen || (height >= 9)
                 then seen 
