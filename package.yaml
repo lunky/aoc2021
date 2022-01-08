@@ -30,6 +30,8 @@ library:
   dependencies:
     - containers
     - split 
+    - array
+    - search-algorithms
 
 executables:
   aoc2021-exe:

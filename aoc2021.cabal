@@ -32,6 +32,7 @@ library
       Day12
       Day13
       Day14
+      Day15
       Day2
       Day3
       Day4
@@ -43,8 +44,10 @@ library
   hs-source-dirs:
       src
   build-depends:
-      base >=4.7 && <5
+      array
+    , base >=4.7 && <5
     , containers
+    , search-algorithms
     , split
   default-language: Haskell2010
 
@@ -69,6 +72,7 @@ test-suite aoc2021-test
       Day12Spec
       Day13Spec
       Day14Spec
+      Day15Spec
       Day1Spec
       Day2Spec
       Day3Spec
